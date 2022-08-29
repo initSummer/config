@@ -1,0 +1,9 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=lxh
+
+#1 * * * * date >> /home/lxh/MyConfig/test.txt
+
+#apt clean
+#apt autoclean
+#apt autoremove

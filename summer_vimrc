@@ -1,0 +1,48 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+Plugin 'joshdick/onedark.vim'
+Plugin 'skywind3000/asyncrun.vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'luochen1990/rainbow'
+
+Plugin 'neoclide/coc.nvim'
+
+" Plugin 'sbdchd/neoformat'
+
+"Plugin 'nvim-lua/plenary.nvim'
+"Plugin 'nvim-telescope/telescope.nvim'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" Put your non-Plugin stuff after this line
+
+
+runtime! debian.vim
+if has("syntax")
+  syntax on
+endif
+if has("autocmd")
+  filetype plugin indent on
+endif
+
+source ~/MyConfig/vimconfig/normal
+" source ~/MyConfig/vimconfig/myVim
+source ~/MyConfig/vimconfig/coc_nvim
+source ~/MyConfig/vimconfig/rainbow
+" source ~/MyConfig/vimconfig/neoformat
+source ~/MyConfig/vimconfig/AsyncRun
+source ~/MyConfig/vimconfig/airline
+" source ~/MyConfig/vimconfig/nerdtree
+" source ~/MyConfig/vimconfig/coc_explorer
+" source ~/MyConfig/vimconfig/telescope
+

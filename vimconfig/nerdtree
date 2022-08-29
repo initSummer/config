@@ -1,0 +1,5 @@
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" map 是快捷键映射命令
+" <C-n> 定义了快捷键，表示 Ctrl-n
+" 后面是对应的命令以及回车键 <CR>
