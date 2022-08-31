@@ -61,6 +61,7 @@ set clipboard=unnamed	"share clip
 let g:markdown_fenced_languages =['c', 'cpp', 'python', 'javascript']
 set background=dark
 colorscheme onedark
+set fillchars=vert:\⎜
 
 " summer's hot key
 " 窗口移动快捷键
@@ -81,4 +82,28 @@ noremap <Leader>s :wa<CR>
 noremap <Leader>q :qa<CR>
 " open tree
 nmap <space>e <Cmd>CocCommand explorer<CR>
+" autoNote
+noremap <C-n> :call SummerNote()<CR>
 
+" summer's function
+" auto split when open a .h file
+function SummerAutoSplit()
+  :180vsp
+  :wincmd l 
+  :sp
+  :wincmd h 
+  :CocCommand explorer
+  :wincmd h 
+endfunction
+autocmd BufWinEnter *.h :call SummerAutoSplit()
+" cpp auto //
+function SummerNote()
+  if(mode()=="n")
+    :execute "normal! 0"
+    :execute "normal! I// \<ESC>"
+  elseif mode()=="v-block!"
+    :excute "v-block! 0"
+    :excute "v-block! I// \<ESC>"
+    :excute "normal!"
+  endif
+endfunction
