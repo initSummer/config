@@ -43,27 +43,28 @@ set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 " setlocal foldlevel=1 " 设置折叠层数为 1
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
 
-set fillchars=eob:\ 
 
 " summer's command
 " 
-" :iab xtime <C-R>=strftime('%Y-%m-%d %H:%M:%S Summer')<CR>
 :iab _xtime <C-R>=strftime('To %H:%M')
 :iab _summerTime <C-R>=strftime('%c Summer')<cr><cr>----------------------------------------<cr>
 " 设置每日工作内容文件头格式
-:set termguicolors
+set termguicolors
 " 24bit color
 set tags=./tags,tags;$HOME
-" :iab main( #include<iostream><cr>using namespace std;<cr><cr>int main(int argc, char* argv[], char* env[])<cr>{<cr><cr>  return 0;<cr>}
+" set tags=./.tags;,.tags
+iab main( #include<iostream><cr>using namespace std;<cr><cr>int main(int argc, char* argv[], char* env[])<cr>{<cr><cr>  return 0;<cr>}
 "
 
 set clipboard=unnamed	"share clip
 let g:markdown_fenced_languages =['c', 'cpp', 'python', 'javascript']
 set background=dark
+set guifont=Source_Han_Sans:h11
 colorscheme onedark
 set fillchars=vert:\⎜
+set fillchars=eob:\
 
-" summer's hot key
+" ------------------------Map----------------------------
 " 窗口移动快捷键
 noremap <TAB>w <C-w>w
 noremap <TAB>W <C-w>w
@@ -81,29 +82,54 @@ noremap <Leader>[ :tabprevious<CR>
 noremap <Leader>s :wa<CR>
 noremap <Leader>q :qa<CR>
 " open tree
-nmap <space>e <Cmd>CocCommand explorer<CR>
-" autoNote
+nmap <space>e <Cmd>NERDTree<CR>
 noremap <C-n> :call SummerNote()<CR>
+noremap <C-p> :call SummerSplit()<CR>
 
-" summer's function
-" auto split when open a .h file
-function SummerAutoSplit()
-  :180vsp
+noremap <F2> :LeaderfFunction!<cr>
+nmap <F8> :TagbarToggle<CR>
+noremap <F10> :call UpdateCtags()<CR>
+
+" ------------------------function--------------------------------------------------
+
+" split
+function SummerSplit()
+  :NERDTree 
   :wincmd l 
-  :sp
-  :wincmd h 
-  :CocCommand explorer
-  :wincmd h 
+  :55sp
+  :120vsp
+  :wincmd l 
+  :27sp
+  :wincmd j 
+  :wincmd j 
+  :term ++curwin
 endfunction
-autocmd BufWinEnter *.h :call SummerAutoSplit()
+
 " cpp auto //
 function SummerNote()
   if(mode()=="n")
     :execute "normal! 0"
-    :execute "normal! I// \<ESC>"
+    :execute "normal! i// \<ESC>"
   elseif mode()=="v-block!"
     :excute "v-block! 0"
     :excute "v-block! I// \<ESC>"
     :excute "normal!"
   endif
 endfunction
+
+" update ctags 
+function UpdateCtags()
+    let curdir=getcwd()
+    while !filereadable("./tags")
+        cd ..
+        if getcwd() == "/"
+            break
+        endif
+    endwhile
+    if filewritable("./tags")
+        !ctags -R --c++-types=+px --excmd=pattern --exclude=Makefile --exclude=.
+    endif
+    execute ":cd " . curdir
+endfunction
+autocmd BufWritePost * call UpdateCtags()
+

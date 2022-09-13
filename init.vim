@@ -15,12 +15,12 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'luochen1990/rainbow'
 
-Plugin 'neoclide/coc.nvim'
+Plugin 'Yggdroot/LeaderF'
 
-" Plugin 'sbdchd/neoformat'
+Plugin 'Yggdroot/indentLine'
 
-"Plugin 'nvim-lua/plenary.nvim'
-"Plugin 'nvim-telescope/telescope.nvim'
+Plugin 'preservim/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,14 +35,18 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-source ~/MyConfig/vimconfig/normal
-" source ~/MyConfig/vimconfig/myVim
-source ~/MyConfig/vimconfig/coc_nvim
-source ~/MyConfig/vimconfig/rainbow
-" source ~/MyConfig/vimconfig/neoformat
-source ~/MyConfig/vimconfig/AsyncRun
-source ~/MyConfig/vimconfig/airline
-" source ~/MyConfig/vimconfig/nerdtree
-" source ~/MyConfig/vimconfig/coc_explorer
-" source ~/MyConfig/vimconfig/telescope
-
+source ~/MyConfig/vimconfig/normal.vim
+" source ~/MyConfig/vimconfig/myVim.vim
+source ~/MyConfig/vimconfig/coc_nvim.vim
+source ~/MyConfig/vimconfig/rainbow.vim
+" source ~/MyConfig/vimconfig/neoformat.vim
+source ~/MyConfig/vimconfig/AsyncRun.vim
+source ~/MyConfig/vimconfig/airline.vim
+" source ~/MyConfig/vimconfig/nerdtree.vim
+" source ~/MyConfig/vimconfig/coc_explorer.vim
+" source ~/MyConfig/vimconfig/telescope.vim
+" source ~/MyConfig/vimconfig/youcompleteme.vim
+source ~/MyConfig/vimconfig/apc.vim
+" source ~/MyConfig/vimconfig/tagbar.vim
+source ~/MyConfig/vimconfig/indentLine.vim
+source ~/MyConfig/vimconfig/LeaderfFunction.vim
