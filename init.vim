@@ -8,7 +8,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'joshdick/onedark.vim'
-Plugin 'skywind3000/asyncrun.vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -20,6 +19,8 @@ Plugin 'Yggdroot/LeaderF'
 Plugin 'Yggdroot/indentLine'
 
 Plugin 'preservim/nerdtree'
+
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,17 +37,16 @@ if has("autocmd")
 endif
 
 source ~/MyConfig/vimconfig/normal.vim
-" source ~/MyConfig/vimconfig/myVim.vim
-source ~/MyConfig/vimconfig/coc_nvim.vim
+" source ~/MyConfig/vimconfig/coc_nvim.vim
 source ~/MyConfig/vimconfig/rainbow.vim
 " source ~/MyConfig/vimconfig/neoformat.vim
-source ~/MyConfig/vimconfig/AsyncRun.vim
+" source ~/MyConfig/vimconfig/AsyncRun.vim
 source ~/MyConfig/vimconfig/airline.vim
 " source ~/MyConfig/vimconfig/nerdtree.vim
 " source ~/MyConfig/vimconfig/coc_explorer.vim
 " source ~/MyConfig/vimconfig/telescope.vim
-" source ~/MyConfig/vimconfig/youcompleteme.vim
-source ~/MyConfig/vimconfig/apc.vim
+source ~/MyConfig/vimconfig/youcompleteme.vim
 " source ~/MyConfig/vimconfig/tagbar.vim
 source ~/MyConfig/vimconfig/indentLine.vim
 source ~/MyConfig/vimconfig/LeaderfFunction.vim
+source ~/MyConfig/vimconfig/processWordBook.vim

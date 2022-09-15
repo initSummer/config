@@ -5,17 +5,13 @@ set encoding=utf-8                       " 编码设置
 set expandtab                            " 用space替代tab的输入
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
+" set ignorecase		" Do case insensitive matching
+" set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
 
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
 
 setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
@@ -81,13 +77,14 @@ noremap <Leader>[ :tabprevious<CR>
 " 使用 \ + s 保存, \ + q 退出
 noremap <Leader>s :wa<CR>
 noremap <Leader>q :qa<CR>
+noremap q :qa<CR>
 " open tree
 nmap <space>e <Cmd>NERDTree<CR>
 noremap <C-n> :call SummerNote()<CR>
 noremap <C-p> :call SummerSplit()<CR>
 
 noremap <F2> :LeaderfFunction!<cr>
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 noremap <F10> :call UpdateCtags()<CR>
 
 " ------------------------function--------------------------------------------------
@@ -131,5 +128,5 @@ function UpdateCtags()
     endif
     execute ":cd " . curdir
 endfunction
-autocmd BufWritePost * call UpdateCtags()
+"autocmd BufWritePost * call UpdateCtags()
 
