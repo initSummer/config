@@ -11,7 +11,7 @@ set completeopt=menu,menuone
 let g:ycm_add_preview_to_completeopt = 0
 
 " dont show diagnostics ui
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui=0
 
 " show confirm information of conf.py
 let g:ycm_confirm_extra_conf=0
@@ -28,3 +28,8 @@ let g:ycm_filetype_whitelist = {
 			\ "zsh":1,
 			\ "zimbu":1,
 			\ }
+
+
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>

@@ -49,16 +49,20 @@ set termguicolors
 " 24bit color
 set tags=./tags,tags;$HOME
 " set tags=./.tags;,.tags
-iab main( #include<iostream><cr>using namespace std;<cr><cr>int main(int argc, char* argv[], char* env[])<cr>{<cr><cr>  return 0;<cr>}
+iab main() #include<iostream><cr>using namespace std;<cr><cr>int main(int argc, char* argv[], char* env[])<cr>{<cr><cr>return 0;<cr>}
 "
 
 set clipboard=unnamed	"share clip
 let g:markdown_fenced_languages =['c', 'cpp', 'python', 'javascript']
 set background=dark
+autocmd vimenter * hi Normal guibg=NONE ctermbg=15 " transparent bg
+autocmd vimenter * hi Terminal guibg=NONE ctermbg=15 " transparent bg
+autocmd terminalopen * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 set guifont=Source_Han_Sans:h11
 colorscheme onedark
 set fillchars=vert:\⎜
 set fillchars=eob:\
+hi VertSplit term=reverse cterm=reverse  gui=none  guifg=#222222
 
 " ------------------------Map----------------------------
 " 窗口移动快捷键
