@@ -7,7 +7,8 @@ for i in "$*"; do
   n=$word
   echo $time1 >> ~/wordBook
   echo "----------------------------" >>  ~/wordBook
-  trans -p -show-translation-phonetics n -show-languages n -show-prompt-message n :zh $i | tee -a ~/wordBook 
+  trans  -show-translation-phonetics n -show-languages n -show-prompt-message n :zh $i | tee -a ~/wordBook 
+#   trans -p -show-translation-phonetics n -show-languages n -show-prompt-message n :zh $i | tee -a ~/wordBook 
   echo "" >>  ~/wordBook
   m=$(($n+1))
   cat /dev/null > ~/MyConfig/count/translator.cnt 

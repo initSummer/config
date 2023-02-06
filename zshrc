@@ -102,11 +102,12 @@ configure_prompt() {
     prompt_symbol=🍃
     prompt_symbol=🌸
     prompt_symbol=❄️
+    userName='summer'
     # Skull emoji for root terminal
     #[ "$EUID" -eq 0 ] && prompt_symbol=💀
     case "$PROMPT_ALTERNATIVE" in
         twoline)
-            PROMPT=$'%F{%(#.blue.green)}┌──%B%F{%(#.red.blue)}summer'$prompt_symbol$' %{%F{blue}%}%D{%T} %D{%m/%f} %B%F{reset}%b%F{%(#.blue.green)}[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
+            PROMPT=$'%F{%(#.blue.green)}┌──%B%F{%(#.red.blue)}'$userName$''$prompt_symbol$' %{%F{blue}%}%D{%T} %D{%m/%f} %B%F{reset}%b%F{%(#.blue.green)}[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
             # Right-side prompt with exit codes and background processes
             #RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
             ;;
@@ -263,6 +264,7 @@ fi
 export LC_CTYPE=en_US.UTF-8
 
 alias ll='ls -l'
+alias l='ls '
 alias la='ls -al'
 alias vi='vim'
 alias python='python3'
@@ -271,4 +273,5 @@ alias summerclip='xclip -sel clip '
 alias p='python3'
 alias q='exit'
 alias t='sh ~/MyConfig/t.sh'
-
+alias mva='sh ~/MyConfig/sh/mva.sh'
+alias cpa='sh ~/MyConfig/sh/cpa.sh'

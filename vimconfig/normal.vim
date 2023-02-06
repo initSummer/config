@@ -16,7 +16,7 @@ set mouse=a		" Enable mouse usage (all modes)
 setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 set number " 显示行号
-set relativenumber                       " 显示相对行号
+" set relativenumber                       " 显示相对行号
 "set cursorline " 突出显示当前行
 set ruler " 打开状态栏标尺
 set shiftwidth=2 " 设定 << 和 >> 命令移动时的宽度为 2
@@ -61,7 +61,7 @@ autocmd terminalopen * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 set guifont=Source_Han_Sans:h11
 colorscheme onedark
 set fillchars=vert:\⎜
-set fillchars=eob:\
+set fillchars=eob:\ 
 hi VertSplit term=reverse cterm=reverse  gui=none  guifg=#222222
 
 " ------------------------Map----------------------------
