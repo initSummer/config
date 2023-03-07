@@ -275,3 +275,5 @@ alias q='exit'
 alias t='sh ~/MyConfig/t.sh'
 alias mva='sh ~/MyConfig/sh/mva.sh'
 alias cpa='sh ~/MyConfig/sh/cpa.sh'
+
+source ~/MyConfig/redefineRemove

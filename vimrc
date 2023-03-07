@@ -50,4 +50,5 @@ source ~/MyConfig/vimconfig/youcompleteme.vim
 source ~/MyConfig/vimconfig/indentLine.vim
 source ~/MyConfig/vimconfig/LeaderfFunction.vim
 source ~/MyConfig/vimconfig/processWordBook.vim
+source ~/MyConfig/vimconfig/setCpp.vim
 
