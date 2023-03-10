@@ -10,26 +10,31 @@ fi
 alias rm=moveToTrash
 alias rmll="ll ~/$trash_path" 
 alias rmclear=clearTrash 
+alias rmjump=gotoTrash
 alias trash=/bin/rm
 
 # 恢复文件的函数 
 # restorefile() 
 # { 
-#  mv -i ~/.trash/$@ ./ 
+#  mv -i ~/$trash_path/$@ ./ 
 # } 
 
 moveToTrash() 
 { 
 for i in $*
 do
-  mv $i ~/.trash/$i`date +%%%F%%%T` 
+  mv $i ~/$trash_path/$i`date +%%%F%%%T` 
 done
 } 
+gotoTrash()
+{
+cd ~/$trash_path
+}
 
 clearTrash() 
 { 
   echo -n "clear trash? [y/n]";
   read confirm;
-  [ $confirm = 'y' ] || [ $confirm = 'Y' ] && /bin/rm -rf ~/.trash/* ;
+  [ $confirm = 'y' ] || [ $confirm = 'Y' ] && /bin/rm -rf ~/$trash_path/* ;
 } 
 
