@@ -272,7 +272,7 @@ alias transsh='trans -I -p :zh'
 alias summerclip='xclip -sel clip '
 alias p='python3'
 alias q='exit'
-alias t='sh ~/MyConfig/t.sh'
+alias t='sh ~/MyConfig/sh/t.sh'
 alias mva='sh ~/MyConfig/sh/mva.sh'
 alias cpa='sh ~/MyConfig/sh/cpa.sh'
 

@@ -8,6 +8,7 @@ fi
 
 # 定义别名：使用 rm 就调用 trash 
 alias rm=trash 
+alias trash=/bin/rm
 
 # 使用 rl 就调用 'ls ~/.trash' 
 # 如果更改上面的回收站目录这里的目录也需要修改 
@@ -28,7 +29,10 @@ alias rmclear=cleartrash
 # 删除文件的函数 
 trash() 
 { 
-  mv $@ ~/.trash/$@`date +%%%F%%%T` 
+for i in $*
+do
+  mv $i ~/.trash/$i`date +%%%F%%%T` 
+done
 } 
 
 # 清空回收站的函数 
@@ -37,5 +41,5 @@ cleartrash()
   echo -n "clear trash? [y/n]";
   read confirm;
   [ $confirm = 'y' ] || [ $confirm = 'Y' ] && /bin/rm -rf ~/.trash/* ;
-
 } 
+
