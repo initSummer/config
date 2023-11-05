@@ -50,7 +50,7 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=15 " transparent bg
 autocmd vimenter * hi Terminal guibg=NONE ctermbg=15 " transparent bg
 autocmd terminalopen * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 set guifont=Source_Han_Sans:h11
-colorscheme onedark
+"colorscheme onedark
 set fillchars=vert:\⎜
 set fillchars=eob:\ 
 hi VertSplit term=reverse cterm=reverse  gui=none  guifg=#222222
