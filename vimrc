@@ -1,5 +1,4 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 "call vundle#begin()
 "Plugin 'VundleVim/Vundle.vim'
@@ -28,14 +27,16 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-runtime! debian.vim
-if has("syntax")
-  syntax on
-endif
-if has("autocmd")
-  filetype plugin indent on
-endif
 
+" func 
+" summer info
+source ~/.summerConfig/vimconfig/SummerInfo.vim
+" vim setting
 source ~/.summerConfig/vimconfig/setting.vim
+
+" color
+set runtimepath+=~/.summerConfig/vimplugin/onedark.vim
+source ~/.summerConfig/vimcolor/onedark.vim
+
 source ~/.summerConfig/vimconfig/iab.vim
 source ~/.summerConfig/vimconfig/map.vim

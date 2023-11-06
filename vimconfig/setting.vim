@@ -9,10 +9,7 @@ set showmatch		" Show matching brackets.
 " set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
-set hidden		" Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
-
-
+set hidden		" Hide buffers when they are abandoned set mouse=a		" Enable mouse usage (all modes)
 setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 set number " 显示行号
@@ -50,22 +47,7 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=15 " transparent bg
 autocmd vimenter * hi Terminal guibg=NONE ctermbg=15 " transparent bg
 autocmd terminalopen * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 set guifont=Source_Han_Sans:h11
-"colorscheme onedark
+
 set fillchars=vert:\⎜
 set fillchars=eob:\ 
 hi VertSplit term=reverse cterm=reverse  gui=none  guifg=#222222
-" ------------------------function--------------------------------------------------
-
-" split
-function SummerSplit()
-  :NERDTree 
-  :wincmd l 
-  :55sp
-  :120vsp
-  :wincmd l 
-  :27sp
-  :wincmd j 
-  :wincmd j 
-  :term ++curwin
-endfunction
-
