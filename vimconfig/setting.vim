@@ -1,3 +1,14 @@
+"
+" Author        : Summer
+" Description   : vim setting
+" 
+" Revision      : 
+" Rev.    Date        Designer    Description
+" 1.0     2023-11-07  Summer      Initial version
+" 
+
+syntax on
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 filetype on                              " 开启文件类型检测
