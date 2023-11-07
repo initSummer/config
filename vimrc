@@ -1,3 +1,12 @@
+"
+" Author        : Summer
+" Description   : Make a short description for your file
+" 
+" Revision      : 
+" Rev.    Date        Designer    Description
+" 1.0     2023-11-07  Summer      Initial version
+" 
+
 set nocompatible              " be iMproved, required
 set rtp+=~/.vim/bundle/Vundle.vim
 
