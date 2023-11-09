@@ -5,8 +5,10 @@
 # Revision      : 
 # Rev.    Date        Designer    Description
 # 1.0     2023-11-07  Summer      Initial version
+# 1.1     2023-11-09  Summer      add clion, pycharm
 # 
 
+alias clion='~/app/clion-2023.2.2/bin/clion.sh'
 alias gita="git add -u"
 alias gitc="git commit -m"
 alias gits="git status"
@@ -15,6 +17,7 @@ alias l='ls -CF --color=auto'
 alias la='l -al'
 alias ll='l -l'
 alias p='python3'
+alias pycharm='~/app/pycharm-2023.2.3/bin/pycharm.sh'
 alias python='python3'
 alias q='exit'
 #alias rename='rename.ul'
