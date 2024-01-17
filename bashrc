@@ -5,6 +5,7 @@
 # Revision      : 
 # Rev.    Date        Designer    Description
 # 1.0     2023-11-07  Summer      Initial version
+# 1.1     2023-01-17  Summer      configure_prompt
 # 
 
 # If not running interactively, don't do anything
