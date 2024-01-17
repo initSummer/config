@@ -9,6 +9,7 @@
 # 
 
 alias clion='(nohup ~/app/clion-2023.2.2/bin/clion.sh > /dev/null &) > /dev/null'
+alias crb='crontab'
 alias gita="git add -u"
 alias gitc="git commit -m"
 alias gits="git status"

@@ -7,7 +7,6 @@
 # 1.0     2023-11-07  Summer      Initial version
 # 
 
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -51,33 +50,19 @@ esac
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\t\d\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u\d\t@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\d\t@\h: \w\a\]$PS1"
-    # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+SUMMER_BASH_USERNAME_COLOR="\[\e[38;2;0;250;146;1m\]"
+SUMMER_BASH_ENV_COLOR="\[\e[38;2;253;248;220;1m\]"
+SUMMER_BASH_DIR_COLOR="\[\e[38;2;85;255;255;1m\]"
+SUMMER_BASH_DOL_COLOR="\[\e[38;2;85;255;255;5m\]"
+SUMMER_BASH_END_COLOR="\[\e[0m\]"
+condaEnv=""
+configure_prompt(){
+  PS1='\
+'$SUMMER_BASH_USERNAME_COLOR'┌'$SUMMER_USER_NAME''$SUMMER_PROMPT_SYMBOL'@\t\
+'$SUMMER_ENV_COLOR''$condaEnv'\n\
+'$SUMMER_BASH_USERNAME_COLOR'| '$SUMMER_BASH_DIR_COLOR'\w \n\
+'$SUMMER_BASH_USERNAME_COLOR'└ '$SUMER_BASH_DOL_COLOR'$ '$SUMMER_BASH_END_COLOR''
+}
+configure_prompt
 
 source ~/.summerConfig/commands/alias.sh
