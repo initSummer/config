@@ -4,10 +4,11 @@
 " Revision      : 
 " Rev.    Date        Designer    Description
 " 1.0     2023-11-06  Summer      Initial version
+" 1.1     2024-03-14  Summer      change comment symbol 
 " 
 
 function SummerInfo()
-  let username = "Summer"
+  let username = $SUMMER_USER_NAME
   let year = strftime("%Y")
   let date = strftime("%Y-%m-%d")
 
@@ -16,6 +17,8 @@ function SummerInfo()
     let comment_symbol="//"
   elseif &filetype == 'python'
     let comment_symbol="#"
+  elseif &filetype == 'vim'
+    let comment_symbol="\""
   endif
 
   let info = [

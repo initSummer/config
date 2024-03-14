@@ -27,6 +27,8 @@ source ${SUMMER_CONFIG_DIR}/vimcolor/airline.vim
 " onedark
 set runtimepath+=${SUMMER_CONFIG_DIR}/vimplugin/onedark.vim
 source ${SUMMER_CONFIG_DIR}/vimcolor/onedark.vim
+" vimcolor
+source ${SUMMER_CONFIG_DIR}/vimcolor/vimColor.vim
 
 source ${SUMMER_CONFIG_DIR}/vimconfig/iab.vim
 source ${SUMMER_CONFIG_DIR}/vimconfig/map.vim

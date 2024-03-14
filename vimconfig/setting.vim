@@ -50,6 +50,8 @@ set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 set termguicolors
 set tags=./tags,tags;$HOME
 " set tags=./.tags;,.tags
+set cul "highlight curse line
+set cuc "highlight curse col
 "
 
 set clipboard=unnamed	"share clip

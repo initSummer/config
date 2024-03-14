@@ -1,0 +1,1 @@
+source ~/.summerConfig/vimrc
