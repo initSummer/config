@@ -66,4 +66,4 @@ configure_prompt(){
 }
 configure_prompt
 
-source ~/.summerConfig/commands/alias.sh
+source $SUMMER_CONFIG_DIR/commands/alias.sh

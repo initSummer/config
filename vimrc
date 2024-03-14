@@ -12,21 +12,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " func 
 " summer info
-source ~/.summerConfig/vimconfig/SummerInfo.vim
+source ${SUMMER_CONFIG_DIR}/vimconfig/SummerInfo.vim
 " nerdtree
-set runtimepath+=~/.summerConfig/vimplugin/nerdtree
-source ~/.summerConfig/vimconfig/nerdtree.vim
+set runtimepath+=${SUMMER_CONFIG_DIR}/vimplugin/nerdtree
+source ${SUMMER_CONFIG_DIR}/vimconfig/nerdtree.vim
 " vim setting
-source ~/.summerConfig/vimconfig/setting.vim
+source ${SUMMER_CONFIG_DIR}/vimconfig/setting.vim
 
 " color
 " aireline
-set runtimepath+=~/.summerConfig/vimplugin/vim-airline
-set runtimepath+=~/.summerConfig/vimplugin/vim-airline-themes
-source ~/.summerConfig/vimcolor/airline.vim
+set runtimepath+=${SUMMER_CONFIG_DIR}/vimplugin/vim-airline
+set runtimepath+=${SUMMER_CONFIG_DIR}/vimplugin/vim-airline-themes
+source ${SUMMER_CONFIG_DIR}/vimcolor/airline.vim
 " onedark
-set runtimepath+=~/.summerConfig/vimplugin/onedark.vim
-source ~/.summerConfig/vimcolor/onedark.vim
+set runtimepath+=${SUMMER_CONFIG_DIR}/vimplugin/onedark.vim
+source ${SUMMER_CONFIG_DIR}/vimcolor/onedark.vim
 
-source ~/.summerConfig/vimconfig/iab.vim
-source ~/.summerConfig/vimconfig/map.vim
+source ${SUMMER_CONFIG_DIR}/vimconfig/iab.vim
+source ${SUMMER_CONFIG_DIR}/vimconfig/map.vim

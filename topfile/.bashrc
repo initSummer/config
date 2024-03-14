@@ -1,2 +1,2 @@
-source ~/.summerConfig/init.sh
+source ~/.summerConfig/setting.sh
 source ~/.summerConfig/bashrc

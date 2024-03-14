@@ -260,4 +260,4 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 export LC_CTYPE=en_US.UTF-8
 
-source ~/.summerConfig/commands/alias.sh
+source $SUMMER_CONFIG_DIR/commands/alias.sh
