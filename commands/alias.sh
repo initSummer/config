@@ -8,7 +8,7 @@
 # 1.1     2023-11-09  Summer      add clion, pycharm
 # 
 
-alias clion='(nohup ~/app/clion-2023.2.2/bin/clion.sh > /dev/null &) > /dev/null'
+alias clion='(nohup ~/app/clion-2023.3.4/bin/clion.sh > /dev/null &) > /dev/null'
 alias crb='crontab'
 alias gita="git add -u"
 alias gitc="git commit -m"
