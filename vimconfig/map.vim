@@ -1,3 +1,12 @@
+" 
+" Author        : summer
+" Description   : Make a short description for your file
+" 
+" Revision      :
+" Rev.    Date        Designer    Description
+" 1.0     2024-03-16  summer      Initial version
+" 
+
 " 窗口移动快捷键
 noremap <TAB>w <C-w>w
 noremap <TAB>W <C-w>w

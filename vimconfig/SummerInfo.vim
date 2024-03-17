@@ -5,6 +5,7 @@
 " Rev.    Date        Designer    Description
 " 1.0     2023-11-06  Summer      Initial version
 " 1.1     2024-03-14  Summer      change comment symbol 
+" 1.2     2024-03-17  Summer      add .sh comment
 " 
 
 function SummerInfo()
@@ -19,9 +20,12 @@ function SummerInfo()
     let comment_symbol="#"
   elseif &filetype == 'vim'
     let comment_symbol="\""
+  elseif &filetype == 'sh'
+    let comment_symbol="#"
   endif
 
   let info = [
+        \printf("%s ", &filetype),
         \printf("%s ", comment_symbol),
         \printf("%s Author        : %s", comment_symbol, username),
         \printf("%s Description   : Make a short description for your file", comment_symbol),
