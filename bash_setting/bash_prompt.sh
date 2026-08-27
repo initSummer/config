@@ -1,5 +1,3 @@
-
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -30,4 +28,4 @@ configure_prompt(){
 '$SUMMER_BASH_USERNAME_COLOR'| '$SUMMER_BASH_DIR_COLOR'\w \n\
 '$SUMMER_BASH_USERNAME_COLOR'└ '$SUMER_BASH_DOL_COLOR'$ '$SUMMER_BASH_END_COLOR''
 }
-configure_prompt
+PROMPT_COMMAND=configure_prompt

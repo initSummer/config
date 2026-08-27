@@ -47,7 +47,9 @@ set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
 " set foldcolumn=0 " 设置折叠区域的宽度
 " setlocal foldlevel=1 " 设置折叠层数为 1
 " nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
-" set termguicolors
+if has('termguicolors')
+  set termguicolors
+endif
 set tags=./tags,tags;$HOME
 " set tags=./.tags;,.tags
 set cul "highlight curse line
@@ -59,7 +61,9 @@ let g:markdown_fenced_languages =['c', 'cpp', 'python', 'javascript']
 set background=dark
 autocmd vimenter * hi Normal guibg=NONE ctermbg=15 " transparent bg
 autocmd vimenter * hi Terminal guibg=NONE ctermbg=15 " transparent bg
-" autocmd terminalopen * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+if has('terminal')
+  autocmd terminalopen * hi Normal guibg=NONE ctermbg=NONE " transparent bg
+endif
 set guifont=Source_Han_Sans:h11
 
 set fillchars=vert:\⎜
