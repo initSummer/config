@@ -8,20 +8,35 @@
 # 1.1     2023-11-09  Summer      add clion, pycharm
 # 
 
-alias clion='(nohup ~/app/clion-2023.3.4/bin/clion.sh > /dev/null &) > /dev/null'
+# alias clion='(nohup ~/app/clion-2023.3.4/bin/clion.sh > /dev/null &) > /dev/null'
+
 alias crb='crontab'
+
 alias gita="git add -u"
 alias gitc="git commit -m"
 alias gits="git status"
 alias grep='grep --color=auto'
-alias l='ls -CF --color=auto'
-alias la='l -al'
+
+alias l='ls -CFh --color=auto'
+alias la='l -alh'
 alias ll='l -l'
+
+# alias pycharm='(nohup ~/app/pycharm-2023.2.3/bin/pycharm.sh > /dev/null &) > /dev/null'
+
 alias p='python3'
-alias pycharm='(nohup ~/app/pycharm-2023.2.3/bin/pycharm.sh > /dev/null &) > /dev/null'
+alias py='python3'
 alias python='python3'
+alias python2="\python"
+
 alias q='exit'
+
+alias repo="/repo/git-repo/repo"
+alias repos="repo status"
+
 #alias rename='rename.ul'
+
+alias tree="/btdnfs-nj/xhli/bin/tree -C"
+
 alias vi='vim'
 
 # source

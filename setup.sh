@@ -7,6 +7,6 @@
 # 1.0     2024-01-17  Summer      Initial version
 # 
 
-cp ${HOME}/.summerConfig/topfile/.bashrc ${HOME}
-cp ${HOME}/.summerConfig/topfile/.vimrc ${HOME}
-cp ${HOME}/.summerConfig/topfile/.zshrc ${HOME}
+cat ${HOME}/.summerConfig/topfile/.bashrc >> ${HOME}/.bashrc
+cat ${HOME}/.summerConfig/topfile/.vimrc >> ${HOME}/.vimrc
+cat ${HOME}/.summerConfig/topfile/.zshrc >> ${HOME}/.zshrc

@@ -1,2 +1,19 @@
 source ~/.summerConfig/setting.sh
 source ~/.summerConfig/bashrc
+
+config_dir="~/.summerConfig/user_profile"
+
+# 检查目录是否存在
+if [ ! -d "$config_dir" ]; then
+    echo "Error: Directory $config_dir does not exist." >&2
+    exit 1
+fi
+
+# 遍历目录下的所有普通文件（不递归子目录）
+for file in "$config_dir"/*; do
+    # 确保是普通文件（避免目录、链接等）
+    if [ -f "$file" ]; then
+        # source 该文件
+        . "$file"
+    fi
+done
