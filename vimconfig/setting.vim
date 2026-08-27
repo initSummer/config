@@ -21,7 +21,7 @@ set showmatch		" Show matching brackets.
 set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned 
-set mouse=a		" Enable mouse usage (all modes)
+" set mouse=a		" Enable mouse usage (all modes)
 setlocal noswapfile " 不要生成swap文件
 set bufhidden=hide " 当buffer被丢弃的时候隐藏它
 set number " 显示行号

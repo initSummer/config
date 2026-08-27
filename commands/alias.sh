@@ -12,11 +12,6 @@
 
 alias crb='crontab'
 
-alias gita="git add -u"
-alias gitc="git commit -m"
-alias gits="git status"
-alias grep='grep --color=auto'
-
 alias l='ls -CFh --color=auto'
 alias la='l -alh'
 alias ll='l -l'
@@ -39,4 +34,4 @@ alias tree="/btdnfs-nj/xhli/bin/tree -C"
 
 alias vi='vim'
 
-# source
+source ${SUMMER_CONFIG_DIR}/commands/git.sh
