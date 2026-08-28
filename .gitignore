@@ -2,3 +2,11 @@
 
 /apps/clangd_22.1.6
 /apps/clangd_22.1.6.tar.gz
+
+/vim_setting/plugin/async.vim
+/vim_setting/plugin/nerdtree
+/vim_setting/plugin/onedark.vim
+/vim_setting/plugin/rainbow
+/vim_setting/plugin/vim-airline
+/vim_setting/plugin/vim-airline_themes
+/vim_setting/plugin/vim-lsp

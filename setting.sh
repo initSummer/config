@@ -20,3 +20,4 @@ export SUMMER_PROMPT_ALTERNATIVE='twoline'
 export SUMMER_PROMPT_SYMBOL=${SUMMER_PROMPT_SYMBOL_0}
 
 sh ${SUMMER_CONFIG_DIR}/common/init_clangd.sh
+sh ${SUMMER_CONFIG_DIR}/common/init_vim.sh
