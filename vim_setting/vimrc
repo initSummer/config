@@ -1,0 +1,39 @@
+"
+" Author        : Summer
+" Description   : Make a short description for your file
+" 
+" Revision      : 
+" Rev.    Date        Designer    Description
+" 1.0     2023-11-07  Summer      Initial version
+" 
+
+set nocompatible              " be iMproved, required
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" func 
+" summer info
+source ${SUMMER_CONFIG_DIR}/vim_setting/config/SummerInfo.vim
+" nerdtree
+set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/nerdtree
+source ${SUMMER_CONFIG_DIR}/vim_setting/config/nerdtree.vim
+" vim setting
+source ${SUMMER_CONFIG_DIR}/vim_setting/config/setting.vim
+
+" color
+" aireline
+set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/vim-airline
+set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/vim-airline-themes
+source ${SUMMER_CONFIG_DIR}/vim_setting/color/airline.vim
+" onedark
+set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/onedark.vim
+source ${SUMMER_CONFIG_DIR}/vim_setting/color/onedark.vim
+" color
+source ${SUMMER_CONFIG_DIR}/vim_setting/color/vimColor.vim
+
+source ${SUMMER_CONFIG_DIR}/vim_setting/config/iab.vim
+source ${SUMMER_CONFIG_DIR}/vim_setting/config/map.vim
+
+" code work
+set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/async.vim
+set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/vim-lsp
+

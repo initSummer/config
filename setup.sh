@@ -10,3 +10,4 @@
 cat ${HOME}/.summerConfig/topfile/bashrc >> ${HOME}/.bashrc
 cat ${HOME}/.summerConfig/topfile/vimrc >> ${HOME}/.vimrc
 cat ${HOME}/.summerConfig/topfile/zshrc >> ${HOME}/.zshrc
+
