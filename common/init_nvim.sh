@@ -1,4 +1,4 @@
-nvim_config_dir="~/.config/nvim"
+nvim_config_dir="${HOME}/.config/nvim"
 if [ ! -d ${nvim_config_dir} ]; then
     mkdir ${nvim_config_dir} -p
 fi
