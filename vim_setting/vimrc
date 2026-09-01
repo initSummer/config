@@ -33,8 +33,8 @@ source ${SUMMER_CONFIG_DIR}/vim_setting/color/vimColor.vim
 source ${SUMMER_CONFIG_DIR}/vim_setting/config/iab.vim
 source ${SUMMER_CONFIG_DIR}/vim_setting/config/map.vim
 
-" code work
-set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/async.vim
-set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/vim-lsp
-source ${SUMMER_CONFIG_DIR}/vim_setting/config/lsp.vim
+" " code work
+" set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/async.vim
+" set runtimepath+=${SUMMER_CONFIG_DIR}/vim_setting/plugin/vim-lsp
+" source ${SUMMER_CONFIG_DIR}/vim_setting/config/lsp.vim
 
