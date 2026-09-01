@@ -1,7 +1,7 @@
 /user_profile/*
 
-/apps/clangd_22.1.6
-/apps/clangd_22.1.6.tar.gz
+/app/clangd_22.1.6
+/app/clangd_22.1.6.tar.gz
 
 /vim_setting/plugin/async.vim
 /vim_setting/plugin/nerdtree
@@ -10,3 +10,9 @@
 /vim_setting/plugin/vim-airline
 /vim_setting/plugin/vim-airline-themes
 /vim_setting/plugin/vim-lsp
+
+/nvim_setting/plugin/async.vim
+/nvim_setting/plugin/lazy.nvim
+/nvim_setting/plugin/nvim-treesitter
+/nvim_setting/plugin/onedark.nvim
+/nvim_setting/plugin/vim-lsp

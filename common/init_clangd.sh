@@ -1,6 +1,6 @@
 clangd_name="clangd_22.1.6"
 clangd_tar_name="${clangd_name}.tar.gz"
-clangd_home="${SUMMER_CONFIG_DIR}/apps"
+clangd_home="${SUMMER_CONFIG_DIR}/app"
 clangd_path=${clangd_home}/${clangd_name}
 clangd_tar_path=${clangd_home}/${clangd_tar_name}
 
