@@ -4,10 +4,7 @@ source ${SUMMER_CONFIG_DIR}/bash_setting/bashrc
 config_dir="${SUMMER_CONFIG_DIR}/user_profile"
 
 # 检查目录是否存在
-if [ ! -d "$config_dir" ]; then
-    echo "Error: Directory $config_dir does not exist." >&2
-fi
-
+if [ -d "$config_dir" ]; then
 # 遍历目录下的所有普通文件（不递归子目录）
 for file in "$config_dir"/*; do
     # 确保是普通文件（避免目录、链接等）
@@ -16,3 +13,4 @@ for file in "$config_dir"/*; do
         . "$file"
     fi
 done
+fi
