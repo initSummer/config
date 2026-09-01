@@ -16,6 +16,8 @@ alias l='ls -CFh --color=auto'
 alias la='l -alh'
 alias ll='l -l'
 
+alias nvim="${SUMMER_CONFIG_DIR}/apps/nvim-linux-x86_64.appimage"
+
 # alias pycharm='(nohup ~/app/pycharm-2023.2.3/bin/pycharm.sh > /dev/null &) > /dev/null'
 
 alias p='python3'
