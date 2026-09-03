@@ -12,7 +12,6 @@ tar_vim_plugin() {
 tar_vim_plugin async.vim
 tar_vim_plugin nerdtree
 tar_vim_plugin onedark.vim
-tar_vim_plugin rainbow
 tar_vim_plugin vim-airline
 tar_vim_plugin vim-airline-themes
 tar_vim_plugin vim-lsp
