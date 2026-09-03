@@ -2,6 +2,7 @@
 
 /app/clangd_22.1.6
 /app/clangd_22.1.6.tar.gz
+/app/nvim-linux-x86_64
 
 /vim_setting/plugin/async.vim
 /vim_setting/plugin/nerdtree

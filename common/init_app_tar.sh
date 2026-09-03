@@ -16,3 +16,4 @@ fi
 
 
 init_app "clangd_22.1.6"
+init_app "nvim-linux-x86_64"
