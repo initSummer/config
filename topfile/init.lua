@@ -1,7 +1,7 @@
 local config_dir = os.getenv("SUMMER_CONFIG_DIR")
 local main_config = config_dir .. "/nvim_setting/config/init.lua"
 
-local ok, err = load(main_config)
+local ok, err = loadfile(main_config)
 if ok then
     ok()
 else
