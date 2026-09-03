@@ -71,3 +71,5 @@ set guifont=Source_Han_Sans:h11
 set fillchars=vert:\⎜
 " set fillchars=eob:\ 
 hi VertSplit term=reverse cterm=reverse  gui=none  guifg=#222222
+autocmd VimEnter * doautocmd BufRead
+
