@@ -16,3 +16,4 @@ tar_vim_plugin rainbow
 tar_vim_plugin vim-airline
 tar_vim_plugin vim-airline-themes
 tar_vim_plugin vim-lsp
+tar_vim_plugin vim-rainbow

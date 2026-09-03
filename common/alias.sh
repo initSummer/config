@@ -33,7 +33,5 @@ alias repos="repo status"
 
 #alias rename='rename.ul'
 
-alias tree="/btdnfs-nj/xhli/bin/tree -C"
-
 alias vi='vim'
 

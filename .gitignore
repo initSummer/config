@@ -11,6 +11,7 @@
 /vim_setting/plugin/vim-airline
 /vim_setting/plugin/vim-airline-themes
 /vim_setting/plugin/vim-lsp
+/vim_setting/plugin/vim-rainbow
 
 /nvim_setting/plugin/async.vim
 /nvim_setting/plugin/lazy.nvim

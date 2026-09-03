@@ -262,3 +262,4 @@ export LC_CTYPE=en_US.UTF-8
 
 source $SUMMER_CONFIG_DIR/commands/alias.sh
 source $SUMMER_CONFIG_DIR/commands/clangd.sh
+source $SUMMER_CONFIG_DIR/common/git.sh
