@@ -1,10 +1,3 @@
-nvim_config_dir="${HOME}/.config/nvim"
-if [ ! -d ${nvim_config_dir} ]; then
-    mkdir ${nvim_config_dir} -p
-fi
-
-cp ${SUMMER_CONFIG_DIR}/nvim_setting/config/init.lua ${nvim_config_dir}
-
 tar_nvim_plugin() {
     plugin_name=${1}
     plugin_home="${SUMMER_CONFIG_DIR}/nvim_setting/plugin"
