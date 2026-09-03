@@ -1,7 +1,7 @@
 source ~/.summerConfig/setting.sh
 source ${SUMMER_CONFIG_DIR}/bash_setting/bashrc
 
-config_dir="${SUMMER_CONFIG_DIR}/user_profile"
+config_dir="${HOME}/user_profile"
 
 # 检查目录是否存在
 if [ -d "$config_dir" ]; then
