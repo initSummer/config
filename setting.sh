@@ -15,9 +15,11 @@ export SUMMER_USER_SHELL='bash'
 
 export SUMMER_USER_NAME='summer'
 
-export SUMMER_PROMPT_ALTERNATIVE='twoline'
+export SUMMER_PROMPT_ALTERNATIVE='multi-line'
 
 export SUMMER_PROMPT_SYMBOL=${SUMMER_PROMPT_SYMBOL_0}
+
+export SUMMER_EN_BLE='true'
 
 sh ${SUMMER_CONFIG_DIR}/common/init_app_tar.sh
 sh ${SUMMER_CONFIG_DIR}/common/init_bash.sh

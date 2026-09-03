@@ -20,7 +20,8 @@ SUMMER_BASH_DIR_COLOR="\[\e[38;2;85;255;255;1m\]"
 SUMMER_BASH_DOL_COLOR="\[\e[38;2;85;255;255;5m\]"
 SUMMER_BASH_END_COLOR="\[\e[0m\]"
 condaEnv=""
-configure_prompt(){
+
+configure_prompt_multi_line(){
   local git_branch=$(get_git_branch)
   PS1='\
 '$SUMMER_BASH_USERNAME_COLOR'┌'$SUMMER_USER_NAME''$SUMMER_PROMPT_SYMBOL'@\t\
@@ -28,4 +29,33 @@ configure_prompt(){
 '$SUMMER_BASH_USERNAME_COLOR'| '$SUMMER_BASH_DIR_COLOR'\w \n\
 '$SUMMER_BASH_USERNAME_COLOR'└ '$SUMER_BASH_DOL_COLOR'$ '$SUMMER_BASH_END_COLOR''
 }
+
+configure_prompt_single_line(){
+  local git_branch=$(get_git_branch)
+  PS1='\
+'$SUMMER_BASH_USERNAME_COLOR''$SUMMER_USER_NAME''$SUMMER_PROMPT_SYMBOL'@\t\
+'$SUMMER_ENV_COLOR''$condaEnv''$SUMMER_BASH_GIT_COLOR''$git_branch'\
+'$SUMMER_BASH_USERNAME_COLOR' '$SUMMER_BASH_DIR_COLOR'\w \
+'$SUMMER_BASH_USERNAME_COLOR' '$SUMER_BASH_DOL_COLOR'$ '$SUMMER_BASH_END_COLOR''
+}
+
+configure_prompt() {
+    case $SUMMER_PROMPT_ALTERNATIVE in
+        'multi-line') configure_prompt_multi_line ;;
+        'single-line') configure_prompt_single_line ;;
+        *) configure_prompt_multi_line ;;
+    esac
+}
+
+switch_prompt() {
+    if [[ ${SUMMER_PROMPT_ALTERNATIVE} == "multi-line" ]]; then
+        SUMMER_PROMPT_ALTERNATIVE="single-line"
+    else
+        SUMMER_PROMPT_ALTERNATIVE="multi-line"
+    fi
+    configure_prompt
+}
+
+
 PROMPT_COMMAND=configure_prompt
+
