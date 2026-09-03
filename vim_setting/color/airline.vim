@@ -29,3 +29,9 @@ let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
+
+" 强制 Vim 在启动完成后立即加载 Airline 主题并重绘状态栏
+autocmd VimEnter * call airline#load_theme() | redrawstatus!
+" 清除默认状态栏的反转属性，防止被终端默认的灰色覆盖
+hi StatusLine cterm=NONE gui=NONE
+
