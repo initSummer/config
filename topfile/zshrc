@@ -1,2 +1,2 @@
 source ~/.summerConfig/setting.sh
-source ${SUMMER_CONFIG_DIR}/bash_setting/zshrc
+source ${SUMMER_CONFIG_DIR}/zsh_setting/zshrc
