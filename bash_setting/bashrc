@@ -40,5 +40,6 @@ source $SUMMER_CONFIG_DIR/common/alias.sh
 source $SUMMER_CONFIG_DIR/common/clangd.sh
 source $SUMMER_CONFIG_DIR/common/git.sh
 
-source ${SUMMER_CONFIG_DIR}/bash_setting/bash_prompt.sh
+source ${SUMMER_CONFIG_DIR}/bash_setting/config/bash_prompt.sh
 
+source ${SUMMER_CONFIG_DIR}/bash_setting/plugin/ble-0.4.0-devel3/ble.sh

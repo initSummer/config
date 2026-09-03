@@ -4,6 +4,8 @@
 /app/clangd_22.1.6.tar.gz
 /app/nvim-linux-x86_64
 
+/bash_setting/plugin/ble-0.4.0-devel3
+
 /vim_setting/plugin/async.vim
 /vim_setting/plugin/nerdtree
 /vim_setting/plugin/onedark.vim
