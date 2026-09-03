@@ -1,7 +1,7 @@
 set t_Co=256
 set laststatus=2
 
-let g:airline_theme='onedark'
+let g:airline_theme='summer'
 
 
 let g:airline#extensions#tabline#enabled = 1
