@@ -8,10 +8,14 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+# 修复因 LANG/LC_CTYPE=C 导致的终端提示符错位
+for pat in '^en_US\.utf-?8$' '^C\.utf-?8$'; do
+    loc=$(locale -a 2>/dev/null | grep -iE "$pat" | head -1)
+    if [ -n "$loc" ]; then
+        export LC_CTYPE="$loc"
+        break
+    fi
+done
 
 SUMMER_BASH_USERNAME_COLOR="\[\e[38;2;0;250;146;1m\]"
 SUMMER_BASH_GIT_COLOR="\[\e[38;2;255;200;0;1m\]"
