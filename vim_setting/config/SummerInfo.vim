@@ -24,7 +24,6 @@ function SummerInfo()
     let comment_symbol="#"
   endif
 
-#        \printf("%s ", &filetype),
   let info = [
         \printf("%s ", comment_symbol),
         \printf("%s Author        : %s", comment_symbol, username),

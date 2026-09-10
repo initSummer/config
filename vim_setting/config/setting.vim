@@ -33,7 +33,9 @@ set number " 显示行号
 "set cursorline " 突出显示当前行
 set ruler " 打开状态栏标尺
 set nobackup " 覆盖文件时不备份
-set autochdir " 自动切换当前目录为当前文件所在的目录
+if exists('+autochdir')
+    set autochdir " 自动切换当前目录为当前文件所在的目录
+endif
 set backupcopy=yes " 设置备份时的行为为覆盖
 set hlsearch " 搜索时高亮显示被找到的文本
 set noerrorbells " 关闭错误信息响铃

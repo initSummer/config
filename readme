@@ -4,6 +4,13 @@
 
 ## 版本
 
+### v1.2 — 2026-09-10
+- **修复**：Vim 配置的两处报错。
+  - `SummerInfo.vim` 第 27 行残留的 `#        \printf("%s ", &filetype),` 导致
+    `E488: Trailing characters`，已删除该行（`#` 不是 Vimscript 注释，且续行语法不完整）。
+  - `setting.vim` 的 `set autochdir` 在精简版 vim（如 CentOS 7 的 `vim-minimal`）上
+    报 `E518: Unknown option`，已用 `if exists('+autochdir')` 包裹，不支持的 vim 自动跳过。
+
 ### v1.1 — 2026-09-10
 - **修复**：终端提示符错位问题。
   当系统 locale 为 `C`（`locale charmap` 返回 `ANSI_X3.4-1968`）时，
