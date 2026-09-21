@@ -21,6 +21,13 @@ export SUMMER_PROMPT_SYMBOL=${SUMMER_PROMPT_SYMBOL_0}
 
 export SUMMER_EN_BLE='true'
 
+# ============================================================
+# NERDTree auto-open switch
+#   1 = auto-open NERDTree when starting Vim or opening a file
+#   0 = do not auto-open (open manually with <space>e)
+# ============================================================
+export SUMMER_AUTO_NERD=0
+
 sh ${SUMMER_CONFIG_DIR}/common/init_app_tar.sh
 sh ${SUMMER_CONFIG_DIR}/common/init_bash.sh
 sh ${SUMMER_CONFIG_DIR}/common/init_nvim.sh

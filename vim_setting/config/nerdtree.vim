@@ -14,3 +14,11 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeNaturalSort = 1
 " let g:NERDTreeHighlightCursorline = 1
 
+if getenv('SUMMER_AUTO_NERD') ==# '1'
+    " Open NERDTree sidebar on startup
+    autocmd VimEnter * NERDTree
+
+    " If a file was passed (vim file.txt), move cursor back to the file window
+    " so we don't start inside NERDTree
+    autocmd VimEnter * if argc() > 0 | wincmd p | endif
+endif
