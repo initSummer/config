@@ -14,7 +14,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeNaturalSort = 1
 " let g:NERDTreeHighlightCursorline = 1
 
-if getenv('SUMMER_AUTO_NERD') ==# '1'
+if $SUMMER_AUTO_NERD ==# 'true'
     " Open NERDTree sidebar on startup
     autocmd VimEnter * NERDTree
 
