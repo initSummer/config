@@ -6,6 +6,7 @@
 # Rev.    Date        Designer    Description
 # 1.0     2023-11-07  Summer      Initial version
 # 1.1     2023-11-09  Summer      add clion, pycharm
+# 1.2     2026-10-10  Summer      add myrm
 # 
 
 # alias clion='(nohup ~/app/clion-2023.3.4/bin/clion.sh > /dev/null &) > /dev/null'
@@ -30,6 +31,10 @@ alias q='exit'
 
 alias repo="/repo/git-repo/repo"
 alias repos="repo status"
+
+if [ ${SUMMER_EN_MYRM} == 'true' ]; then
+    alias rm='myrm'
+fi
 
 #alias rename='rename.ul'
 

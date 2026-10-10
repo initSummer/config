@@ -22,3 +22,4 @@ if $SUMMER_AUTO_NERD ==# 'true'
     " so we don't start inside NERDTree
     autocmd VimEnter * if argc() > 0 | wincmd p | endif
 endif
+

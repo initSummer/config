@@ -4,6 +4,13 @@
 
 ## 版本
 
+### v1.3 — 2026-10-10
+- **新增**：`rm` 替换命令 `myrm`，避免文件删除后无法找回。
+  启用后 `rm` 指向 `myrm`，被删文件移入回收站 `$MYTRASH_DIR`
+  （默认 `~/.local/share/mytrash`），每个条目含 `path`（原始绝对路径）
+  与 `data`（文件本身），恢复时手动把 `data` 移回 `path` 指的位置即可。
+  由环境变量 `SUMMER_EN_MYRM` 控制：`true` 启用 alias，`false` 保留原生 `rm`。
+
 ### v1.2 — 2026-09-10
 - **修复**：Vim 配置的两处报错。
   - `SummerInfo.vim` 第 27 行残留的 `#        \printf("%s ", &filetype),` 导致

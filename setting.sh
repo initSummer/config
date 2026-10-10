@@ -19,16 +19,24 @@ export SUMMER_PROMPT_ALTERNATIVE='multi-line'
 
 export SUMMER_PROMPT_SYMBOL=${SUMMER_PROMPT_SYMBOL_0}
 
-export SUMMER_EN_BLE='true'
+export SUMMER_EN_BLE='false'
+
+# ============================================================
+# rm replacement switch
+#   true  = alias rm to myrm, deleted files go to the trash
+#   false = keep the native rm, deleted files are gone for good
+# ============================================================
+export SUMMER_EN_MYRM='false'
 
 # ============================================================
 # NERDTree auto-open switch
-#   1 = auto-open NERDTree when starting Vim or opening a file
-#   0 = do not auto-open (open manually with <space>e)
+#   true  = auto-open NERDTree when starting Vim or opening a file
+#   false = do not auto-open (open manually with <space>e)
 # ============================================================
-export SUMMER_AUTO_NERD='false'
+export SUMMER_AUTO_NERD='true'
 
 sh ${SUMMER_CONFIG_DIR}/common/init_app_tar.sh
 sh ${SUMMER_CONFIG_DIR}/common/init_bash.sh
 sh ${SUMMER_CONFIG_DIR}/common/init_nvim.sh
 sh ${SUMMER_CONFIG_DIR}/common/init_vim.sh
+
