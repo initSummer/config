@@ -19,6 +19,11 @@ export SUMMER_PROMPT_ALTERNATIVE='multi-line'
 
 export SUMMER_PROMPT_SYMBOL=${SUMMER_PROMPT_SYMBOL_0}
 
+# ============================================================
+# ble.sh line editor switch
+#   true  = load ble.sh, get syntax highlighting and completion
+#   false = use the default readline, no extra features
+# ============================================================
 export SUMMER_EN_BLE='true'
 
 # ============================================================
