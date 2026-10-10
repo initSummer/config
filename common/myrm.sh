@@ -30,7 +30,7 @@ myrm() {
             abs="$(cd "$(dirname "$src")" && pwd)/$(basename "$src")"
         fi
 
-        id="$(date +%Y%m%d-%H%M%S)-$$-$RANDOM"
+        id="$(date +%Y%m%d-%H%M%S)-$$-$RANDOM-$(basename $src)"
         entry="$trash_root/$id"
         mkdir -p "$entry"
         printf '%s\n' "$abs" > "$entry/path"
