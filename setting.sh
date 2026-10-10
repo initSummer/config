@@ -19,14 +19,14 @@ export SUMMER_PROMPT_ALTERNATIVE='multi-line'
 
 export SUMMER_PROMPT_SYMBOL=${SUMMER_PROMPT_SYMBOL_0}
 
-export SUMMER_EN_BLE='false'
+export SUMMER_EN_BLE='true'
 
 # ============================================================
 # rm replacement switch
 #   true  = alias rm to myrm, deleted files go to the trash
 #   false = keep the native rm, deleted files are gone for good
 # ============================================================
-export SUMMER_EN_MYRM='false'
+export SUMMER_EN_MYRM='true'
 
 # ============================================================
 # NERDTree auto-open switch
