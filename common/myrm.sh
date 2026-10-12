@@ -8,7 +8,7 @@
 # 
 
 myrm() {
-    local trash_root="${MYTRASH_DIR:-$HOME/.local/share/mytrash}"
+    local trash_root="${SUMMER_MYRM_TRASH}"
 
     if [ $# -eq 0 ]; then
         echo "missing operand" >&2
