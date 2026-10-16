@@ -29,9 +29,6 @@ alias python2="\python"
 
 alias q='exit'
 
-alias repo="/repo/git-repo/repo"
-alias repos="repo status"
-
 if [ ${SUMMER_EN_MYRM} == 'true' ]; then
     source ${SUMMER_CONFIG_DIR}/common/myrm.sh
     alias rm='myrm'
